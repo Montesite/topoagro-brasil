@@ -1,4 +1,5 @@
 import { Award, Users, Target, Shield, Leaf, CheckCircle } from "lucide-react";
+import officeImage from "@/assets/office.webp";
 
 const About = () => {
   const values = [
@@ -64,25 +65,12 @@ const About = () => {
           </div>
 
           <div className="animate-fade-in-right">
-            <div className="bg-accent rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">18+</div>
-                  <div className="text-muted-foreground font-medium">Anos de experiência</div>
-                </div>
-                <div className="text-center p-4">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">CREA</div>
-                  <div className="text-muted-foreground font-medium">Profissionais registrados</div>
-                </div>
-                <div className="text-center p-4">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">INCRA</div>
-                  <div className="text-muted-foreground font-medium">Credenciamento oficial</div>
-                </div>
-                <div className="text-center p-4">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-muted-foreground font-medium">Comprometimento</div>
-                </div>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={officeImage}
+                alt="Escritório da TopoAgro em Frutal - MG"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
