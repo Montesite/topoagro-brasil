@@ -42,7 +42,7 @@ const Header = () => {
           : "bg-transparent py-4"
       }`}
     >
-      <div className="container-custom flex items-center justify-between px-4 md:px-8">
+      <div className="container-custom flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Logo */}
         <a
           href="#inicio"
