@@ -36,10 +36,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-lg py-2"
-          : "bg-transparent py-4"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-foreground ${
+        isScrolled ? "shadow-lg py-2" : "py-4"
       }`}
     >
       <div className="container-custom flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12">
@@ -71,9 +69,7 @@ const Header = () => {
                 e.preventDefault();
                 scrollToSection(link.href);
               }}
-              className={`font-medium transition-colors duration-300 hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-white"
-              }`}
+              className="font-medium transition-colors duration-300 hover:text-primary text-white"
             >
               {link.label}
             </a>
@@ -92,11 +88,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className={`lg:hidden p-2 rounded-lg transition-colors ${
-            isScrolled
-              ? "text-foreground hover:bg-muted"
-              : "text-white hover:bg-white/20"
-          }`}
+          className="lg:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/20"
           aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -105,7 +97,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden absolute top-full left-0 right-0 bg-foreground shadow-lg transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -118,7 +110,7 @@ const Header = () => {
                 e.preventDefault();
                 scrollToSection(link.href);
               }}
-              className="font-medium text-foreground py-3 px-4 rounded-lg hover:bg-accent transition-colors"
+              className="font-medium text-white py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
             >
               {link.label}
             </a>
