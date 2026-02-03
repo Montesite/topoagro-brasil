@@ -11,6 +11,9 @@ import {
   Repeat,
   Phone,
 } from "lucide-react";
+import surveyorImage from "@/assets/surveyor-work.jpg";
+import droneImage from "@/assets/drone-mapping.jpg";
+import gpsImage from "@/assets/gps-equipment.jpg";
 
 const Services = () => {
   const services = [
@@ -84,6 +87,24 @@ const Services = () => {
     "Topografia em geral",
   ];
 
+  const galleryImages = [
+    {
+      src: surveyorImage,
+      alt: "Profissional de topografia utilizando equipamento de medição em campo",
+      title: "Trabalho em campo",
+    },
+    {
+      src: droneImage,
+      alt: "Vista aérea de propriedade rural com demarcação de limites",
+      title: "Mapeamento aéreo",
+    },
+    {
+      src: gpsImage,
+      alt: "Equipamento GPS de precisão para levantamento topográfico",
+      title: "Equipamentos de precisão",
+    },
+  ];
+
   return (
     <section id="servicos" className="section-padding bg-muted">
       <div className="container-custom">
@@ -100,6 +121,27 @@ const Services = () => {
             de topografia e agrimensura na área rural e urbana.
           </p>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-6" />
+        </div>
+
+        {/* Image Gallery */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="relative rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <p className="text-primary-foreground font-bold text-lg p-6">
+                  {image.title}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Main Services Grid */}
