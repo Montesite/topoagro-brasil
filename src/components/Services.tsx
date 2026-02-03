@@ -27,60 +27,70 @@ const Services = () => {
       title: "Georreferenciamento de imóveis rurais",
       description:
         "Certificação de imóveis rurais junto ao INCRA com precisão e agilidade.",
+      image: surveyorImage,
     },
     {
       icon: TreePine,
       title: "CAR - Averbação de reserva legal",
       description:
         "Cadastro ambiental rural e averbação de reserva legal conforme legislação.",
+      image: droneImage,
     },
     {
       icon: Building,
       title: "Georreferenciamento urbano",
       description:
         "Levantamentos precisos para regularização de imóveis urbanos.",
+      image: gpsImage,
     },
     {
       icon: FileText,
       title: "Consultoria de compra e venda",
       description:
         "Assessoria completa para transações de imóveis rurais com segurança.",
+      image: teamImage,
     },
     {
       icon: Compass,
       title: "Levantamento cadastral",
       description:
         "Mapeamento detalhado de propriedades para fins cadastrais e documentais.",
+      image: digitalMapImage,
     },
     {
       icon: Mountain,
       title: "Levantamento planialtimétrico",
       description:
         "Determinação de altimetria e planimetria com alta precisão técnica.",
+      image: surveyorImage,
     },
     {
       icon: Layers,
       title: "Curva de nível",
       description:
         "Elaboração de curvas de nível para projetos agrícolas e de irrigação.",
+      image: digitalMapImage,
     },
     {
       icon: Repeat,
       title: "Retificação e desmembramento",
       description:
         "Correção de áreas e divisão de propriedades rurais e urbanas.",
+      image: gpsImage,
     },
     {
       icon: BarChart3,
       title: "Inventário e partilha de glebas",
       description:
         "Levantamentos para processos de inventário e partilha de terras.",
+      image: teamImage,
     },
     {
       icon: Plane,
       title: "Mapeamento com drones",
       description:
         "Aerofotogrametria e mapeamento aéreo com tecnologia de ponta.",
+      image: droneFlightImage,
     },
   ];
 
@@ -90,39 +100,6 @@ const Services = () => {
     "Projetos para divisão de pastos",
     "Confinamentos",
     "Topografia em geral",
-  ];
-
-  const galleryImages = [
-    {
-      src: surveyorImage,
-      alt: "Profissional de topografia utilizando equipamento de medição em campo",
-      title: "Trabalho em campo",
-    },
-    {
-      src: droneImage,
-      alt: "Vista aérea de propriedade rural com demarcação de limites",
-      title: "Mapeamento aéreo",
-    },
-    {
-      src: gpsImage,
-      alt: "Equipamento GPS de precisão para levantamento topográfico",
-      title: "Equipamentos de precisão",
-    },
-    {
-      src: teamImage,
-      alt: "Equipe de topógrafos trabalhando em campo",
-      title: "Equipe profissional",
-    },
-    {
-      src: digitalMapImage,
-      alt: "Mapa digital topográfico em tablet mostrando curvas de nível",
-      title: "Tecnologia digital",
-    },
-    {
-      src: droneFlightImage,
-      alt: "Drone profissional em voo para mapeamento aéreo",
-      title: "Mapeamento com drones",
-    },
   ];
 
   return (
@@ -149,32 +126,6 @@ const Services = () => {
           />
         </AnimatedSection>
 
-        {/* Image Gallery */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {galleryImages.map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -10 }}
-              className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-primary-foreground font-bold text-lg p-6">
-                  {image.title}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Main Services Grid */}
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12" staggerDelay={0.08}>
           {services.map((service, index) => (
@@ -182,21 +133,34 @@ const Services = () => {
               <motion.div
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.2 }}
-                className="bg-white rounded-2xl p-6 h-full group"
+                className="bg-white rounded-2xl overflow-hidden h-full group"
               >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300"
-                >
-                  <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                </motion.div>
-                <h3 className="text-lg font-bold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
+                {/* Service Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute bottom-3 left-3 w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg"
+                  >
+                    <service.icon className="w-6 h-6 text-primary-foreground" />
+                  </motion.div>
+                </div>
+                
+                {/* Service Content */}
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-foreground mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </motion.div>
             </StaggerItem>
           ))}
