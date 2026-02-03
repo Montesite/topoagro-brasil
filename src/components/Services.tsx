@@ -12,12 +12,16 @@ import {
   Phone,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import surveyorImage from "@/assets/surveyor-work.jpg";
-import droneImage from "@/assets/drone-mapping.jpg";
-import gpsImage from "@/assets/gps-equipment.jpg";
-import teamImage from "@/assets/team-work.jpg";
-import digitalMapImage from "@/assets/digital-map.jpg";
-import droneFlightImage from "@/assets/drone-flight.jpg";
+import serviceGeoRural from "@/assets/service-georeferencing-rural.jpg";
+import serviceCarReserve from "@/assets/service-car-reserve.jpg";
+import serviceUrbanGeo from "@/assets/service-urban-geo.jpg";
+import serviceConsulting from "@/assets/service-consulting.jpg";
+import serviceCadastral from "@/assets/service-cadastral.jpg";
+import servicePlanaltimetric from "@/assets/service-planaltimetric.jpg";
+import serviceContourLines from "@/assets/service-contour-lines.jpg";
+import serviceSubdivision from "@/assets/service-subdivision.jpg";
+import serviceInventory from "@/assets/service-inventory.jpg";
+import serviceDroneMapping from "@/assets/service-drone-mapping.jpg";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animations";
 
 const Services = () => {
@@ -27,70 +31,70 @@ const Services = () => {
       title: "Georreferenciamento de imóveis rurais",
       description:
         "Certificação de imóveis rurais junto ao INCRA com precisão e agilidade.",
-      image: surveyorImage,
+      image: serviceGeoRural,
     },
     {
       icon: TreePine,
       title: "CAR - Averbação de reserva legal",
       description:
         "Cadastro ambiental rural e averbação de reserva legal conforme legislação.",
-      image: droneImage,
+      image: serviceCarReserve,
     },
     {
       icon: Building,
       title: "Georreferenciamento urbano",
       description:
         "Levantamentos precisos para regularização de imóveis urbanos.",
-      image: gpsImage,
+      image: serviceUrbanGeo,
     },
     {
       icon: FileText,
       title: "Consultoria de compra e venda",
       description:
         "Assessoria completa para transações de imóveis rurais com segurança.",
-      image: teamImage,
+      image: serviceConsulting,
     },
     {
       icon: Compass,
       title: "Levantamento cadastral",
       description:
         "Mapeamento detalhado de propriedades para fins cadastrais e documentais.",
-      image: digitalMapImage,
+      image: serviceCadastral,
     },
     {
       icon: Mountain,
       title: "Levantamento planialtimétrico",
       description:
         "Determinação de altimetria e planimetria com alta precisão técnica.",
-      image: surveyorImage,
+      image: servicePlanaltimetric,
     },
     {
       icon: Layers,
       title: "Curva de nível",
       description:
         "Elaboração de curvas de nível para projetos agrícolas e de irrigação.",
-      image: digitalMapImage,
+      image: serviceContourLines,
     },
     {
       icon: Repeat,
       title: "Retificação e desmembramento",
       description:
         "Correção de áreas e divisão de propriedades rurais e urbanas.",
-      image: gpsImage,
+      image: serviceSubdivision,
     },
     {
       icon: BarChart3,
       title: "Inventário e partilha de glebas",
       description:
         "Levantamentos para processos de inventário e partilha de terras.",
-      image: teamImage,
+      image: serviceInventory,
     },
     {
       icon: Plane,
       title: "Mapeamento com drones",
       description:
         "Aerofotogrametria e mapeamento aéreo com tecnologia de ponta.",
-      image: droneFlightImage,
+      image: serviceDroneMapping,
     },
   ];
 
