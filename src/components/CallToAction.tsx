@@ -14,16 +14,16 @@ const CallToAction = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 md:px-8">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <AnimatedSection direction="left">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 block">
               Tecnologia de ponta
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4 sm:mb-6">
               Precisão que faz a diferença no seu projeto
             </h2>
-            <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8">
+            <p className="text-primary-foreground/90 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
               Utilizamos equipamentos de última geração, incluindo drones para mapeamento aéreo, 
               GPS de alta precisão e softwares especializados para garantir resultados 
               confiáveis em todos os nossos levantamentos.
@@ -31,7 +31,7 @@ const CallToAction = () => {
           </AnimatedSection>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { value: 18, suffix: "+", label: "Anos de experiência" },
               { text: "CREA", label: "Profissionais registrados" },
@@ -46,14 +46,14 @@ const CallToAction = () => {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">
                   {stat.value ? (
                     <CountUp end={stat.value} suffix={stat.suffix} />
                   ) : (
                     stat.text
                   )}
                 </div>
-                <div className="text-primary-foreground/80 text-sm">{stat.label}</div>
+                <div className="text-primary-foreground/80 text-xs sm:text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>

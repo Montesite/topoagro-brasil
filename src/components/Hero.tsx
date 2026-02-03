@@ -55,7 +55,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 md:px-8 pt-24 pb-16 text-center">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -63,11 +63,11 @@ const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           {/* Logo Badge */}
-          <motion.div variants={itemVariants} className="mb-8 flex justify-center">
+          <motion.div variants={itemVariants} className="mb-6 sm:mb-8 flex justify-center">
             <motion.img
               src="/logo.png"
               alt="TopoAgro"
-              className="h-24 md:h-32 drop-shadow-2xl"
+              className="h-16 sm:h-20 md:h-24 lg:h-32 drop-shadow-2xl"
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ duration: 0.3 }}
             />
@@ -76,7 +76,7 @@ const Hero = () => {
           {/* H1 - Company Name */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-lg"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-lg"
           >
             TopoAgro
           </motion.h1>
@@ -84,7 +84,7 @@ const Hero = () => {
           {/* H2 - Description */}
           <motion.h2
             variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-white/90 font-medium mb-4 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 font-medium mb-3 sm:mb-4 max-w-3xl mx-auto px-2"
           >
             Especialistas em topografia, georreferenciamento e agrimensura para imóveis rurais e urbanos
           </motion.h2>
@@ -92,7 +92,7 @@ const Hero = () => {
           {/* Slogan */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-primary font-bold mb-8 tracking-wide"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-primary font-bold mb-6 sm:mb-8 tracking-wide px-2"
           >
             Serviço top é TopoAgro, sempre ao lado do homem do campo.
           </motion.p>
@@ -100,16 +100,16 @@ const Hero = () => {
           {/* Location */}
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center gap-2 text-white/80 mb-10"
+            className="flex items-center justify-center gap-2 text-white/80 mb-8 sm:mb-10"
           >
-            <MapPin className="w-5 h-5" />
-            <span className="text-lg">Frutal - MG e região</span>
+            <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-base md:text-lg">Frutal - MG e região</span>
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
           >
             <motion.a
               href="https://wa.me/5534996406868"

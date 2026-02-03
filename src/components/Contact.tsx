@@ -75,16 +75,16 @@ const Contact = () => {
 
   return (
     <section id="contato" className="section-padding bg-white overflow-hidden">
-      <div className="container-custom">
+      <div className="container-custom px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Section Header */}
-        <AnimatedSection className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+        <AnimatedSection className="text-center mb-10 sm:mb-12 md:mb-16">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">
             Contato
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-3 sm:mb-4">
             Fale conosco
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2">
             Entre em contato para solicitar um orçamento ou tirar suas dúvidas.
             Estamos sempre prontos para atendê-lo.
           </p>
@@ -97,9 +97,9 @@ const Contact = () => {
           />
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
           {/* Contact Info */}
-          <AnimatedSection direction="left" className="space-y-6">
+          <AnimatedSection direction="left" className="space-y-4 sm:space-y-5 md:space-y-6">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
@@ -108,20 +108,20 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ x: 10, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
-                className="flex gap-4 p-6 bg-muted rounded-xl"
+                className="flex gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 bg-muted rounded-lg sm:rounded-xl"
               >
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0"
                 >
-                  <info.icon className="w-6 h-6 text-primary-foreground" />
+                  <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">
+                  <h3 className="font-bold text-sm sm:text-base text-foreground mb-1 sm:mb-2">
                     {info.title}
                   </h3>
-                  <div className="text-muted-foreground">{info.content}</div>
+                  <div className="text-muted-foreground text-sm sm:text-base">{info.content}</div>
                 </div>
               </motion.div>
             ))}
@@ -132,7 +132,7 @@ const Contact = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="flex gap-4 pt-4"
+              className="flex gap-3 sm:gap-4 pt-3 sm:pt-4"
             >
               <motion.a
                 href="https://www.instagram.com/topoagrofrutal/"
@@ -141,9 +141,9 @@ const Contact = () => {
                 aria-label="Instagram da TopoAgro"
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-gradient-to-br from-instagram-from to-instagram-to rounded-lg flex items-center justify-center text-primary-foreground"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-instagram-from to-instagram-to rounded-lg flex items-center justify-center text-primary-foreground"
               >
-                <Instagram className="w-6 h-6" />
+                <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </motion.a>
               <motion.a
                 href="https://www.facebook.com/topoagrofrutal"
@@ -152,9 +152,9 @@ const Contact = () => {
                 aria-label="Facebook da TopoAgro"
                 whileHover={{ scale: 1.2, rotate: -10 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-facebook rounded-lg flex items-center justify-center text-primary-foreground"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-facebook rounded-lg flex items-center justify-center text-primary-foreground"
               >
-                <Facebook className="w-6 h-6" />
+                <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
               </motion.a>
             </motion.div>
           </AnimatedSection>
@@ -164,28 +164,28 @@ const Contact = () => {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 md:p-10 text-white h-full"
+              className="bg-gradient-to-br from-primary to-secondary rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 text-white h-full"
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
                 Pronto para começar seu projeto?
               </h3>
-              <p className="text-white/90 mb-8 text-lg leading-relaxed">
+              <p className="text-white/90 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
                 Entre em contato conosco pelo WhatsApp e receba um atendimento
                 personalizado. Nossos profissionais estão prontos para oferecer a
                 melhor solução para sua necessidade.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <motion.a
                   href="https://wa.me/5534996406868"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03, boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-white text-primary font-bold py-4 px-6 rounded-lg flex items-center justify-center gap-3 text-lg block"
+                  className="w-full bg-white text-primary font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg block"
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -199,16 +199,16 @@ const Contact = () => {
                   href="tel:+553434239185"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-white/20 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center gap-3 text-lg border border-white/40 block"
+                  className="w-full bg-white/20 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg border border-white/40 block"
                 >
-                  <Phone className="w-6 h-6" />
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                   Ligar agora
                 </motion.a>
               </div>
 
               {/* Company Info */}
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <p className="text-white/80 text-sm">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20">
+                <p className="text-white/80 text-xs sm:text-sm">
                   <strong>CNPJ:</strong> 21.673.953/0001-90
                 </p>
               </div>
