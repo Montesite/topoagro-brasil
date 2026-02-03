@@ -14,6 +14,9 @@ import {
 import surveyorImage from "@/assets/surveyor-work.jpg";
 import droneImage from "@/assets/drone-mapping.jpg";
 import gpsImage from "@/assets/gps-equipment.jpg";
+import teamImage from "@/assets/team-work.jpg";
+import digitalMapImage from "@/assets/digital-map.jpg";
+import droneFlightImage from "@/assets/drone-flight.jpg";
 
 const Services = () => {
   const services = [
@@ -102,6 +105,21 @@ const Services = () => {
       src: gpsImage,
       alt: "Equipamento GPS de precisão para levantamento topográfico",
       title: "Equipamentos de precisão",
+    },
+    {
+      src: teamImage,
+      alt: "Equipe de topógrafos trabalhando em campo",
+      title: "Equipe profissional",
+    },
+    {
+      src: digitalMapImage,
+      alt: "Mapa digital topográfico em tablet mostrando curvas de nível",
+      title: "Tecnologia digital",
+    },
+    {
+      src: droneFlightImage,
+      alt: "Drone profissional em voo para mapeamento aéreo",
+      title: "Mapeamento com drones",
     },
   ];
 

@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Users } from "lucide-react";
+import teamImage from "@/assets/team-work.jpg";
 
 const SocialMedia = () => {
   const socials = [
@@ -21,63 +22,80 @@ const SocialMedia = () => {
   ];
 
   return (
-    <section className="section-padding bg-muted">
+    <section className="section-padding bg-white">
       <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-            Redes sociais
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
-            Siga a TopoAgro
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Acompanhe nosso trabalho e fique por dentro das novidades do mundo da topografia e agrimensura.
-          </p>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-6" />
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image Side */}
+          <div className="order-2 lg:order-1">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={teamImage}
+                alt="Equipe TopoAgro trabalhando em campo"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
 
-        {/* Social Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {socials.map((social, index) => (
-            <a
-              key={index}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white rounded-2xl p-8 card-hover flex flex-col items-center text-center"
-            >
-              {/* Icon */}
-              <div
-                className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${social.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-              >
-                <social.icon className="w-10 h-10 text-primary-foreground" />
-              </div>
-
-              {/* Info */}
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                {social.name}
-              </h3>
-              <p className="text-primary font-semibold mb-3">{social.handle}</p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {social.description}
-              </p>
-
-              {/* CTA */}
-              <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-                <Users className="w-5 h-5" />
-                Seguir agora
+          {/* Content Side */}
+          <div className="order-1 lg:order-2">
+            {/* Section Header */}
+            <div className="mb-10">
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                Redes sociais
               </span>
-            </a>
-          ))}
-        </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
+                Siga a TopoAgro
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Acompanhe nosso trabalho e fique por dentro das novidades do mundo da topografia e agrimensura.
+              </p>
+              <div className="w-20 h-1 bg-primary rounded-full mt-6" />
+            </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            Compartilhe suas experiências conosco usando{" "}
-            <span className="text-primary font-semibold">#TopoAgro</span>
-          </p>
+            {/* Social Cards */}
+            <div className="space-y-4">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-muted rounded-xl p-6 card-hover flex items-center gap-5"
+                >
+                  {/* Icon */}
+                  <div
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${social.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <social.icon className="w-8 h-8 text-primary-foreground" />
+                  </div>
+
+                  {/* Info */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-1">
+                      {social.name}
+                    </h3>
+                    <p className="text-primary font-semibold text-sm mb-1">{social.handle}</p>
+                    <p className="text-muted-foreground text-sm">
+                      {social.description}
+                    </p>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Users className="w-6 h-6" />
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Hashtag */}
+            <div className="mt-8">
+              <p className="text-muted-foreground">
+                Compartilhe usando{" "}
+                <span className="text-primary font-bold text-lg">#TopoAgro</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
