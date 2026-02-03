@@ -1,5 +1,7 @@
 import { Instagram, Facebook, Users } from "lucide-react";
+import { motion } from "framer-motion";
 import teamImage from "@/assets/team-work.jpg";
+import { AnimatedSection } from "@/components/ui/animations";
 
 const SocialMedia = () => {
   const socials = [
@@ -22,22 +24,26 @@ const SocialMedia = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
-          <div className="order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+          <AnimatedSection direction="left" className="order-2 lg:order-1">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="rounded-2xl overflow-hidden shadow-xl"
+            >
               <img
                 src={teamImage}
                 alt="Equipe TopoAgro trabalhando em campo"
                 className="w-full h-auto object-cover"
               />
-            </div>
-          </div>
+            </motion.div>
+          </AnimatedSection>
 
           {/* Content Side */}
-          <div className="order-1 lg:order-2">
+          <AnimatedSection direction="right" className="order-1 lg:order-2">
             {/* Section Header */}
             <div className="mb-10">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">
@@ -49,25 +55,37 @@ const SocialMedia = () => {
               <p className="text-muted-foreground text-lg">
                 Acompanhe nosso trabalho e fique por dentro das novidades do mundo da topografia e agrimensura.
               </p>
-              <div className="w-20 h-1 bg-primary rounded-full mt-6" />
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="w-20 h-1 bg-primary rounded-full mt-6 origin-left"
+              />
             </div>
 
             {/* Social Cards */}
             <div className="space-y-4">
               {socials.map((social, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-muted rounded-xl p-6 card-hover flex items-center gap-5"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.15, duration: 0.5 }}
+                  whileHover={{ x: 10 }}
+                  className="group bg-muted rounded-xl p-6 flex items-center gap-5 block"
                 >
                   {/* Icon */}
-                  <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${social.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${social.gradient} flex items-center justify-center flex-shrink-0`}
                   >
                     <social.icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
+                  </motion.div>
 
                   {/* Info */}
                   <div className="flex-1">
@@ -84,18 +102,24 @@ const SocialMedia = () => {
                   <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                     <Users className="w-6 h-6" />
                   </div>
-                </a>
+                </motion.a>
               ))}
             </div>
 
             {/* Hashtag */}
-            <div className="mt-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-8"
+            >
               <p className="text-muted-foreground">
                 Compartilhe usando{" "}
                 <span className="text-primary font-bold text-lg">#TopoAgro</span>
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
