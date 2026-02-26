@@ -36,7 +36,7 @@ const About = () => {
             Sobre nós
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-3 sm:mb-4">
-            Conheça a TopoAgro
+            Conheça a Topoagro
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -55,7 +55,7 @@ const About = () => {
             </h3>
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
               <p>
-                A <strong className="text-foreground">TopoAgro</strong> é uma empresa no ramo de topografia
+                A <strong className="text-foreground">Topoagro</strong> é uma empresa no ramo de topografia
                 que está desde 2008 no mercado, atuando na cidade de Frutal e região. Nossa equipe é
                 formada por um corpo técnico composto de profissionais com registro no CREA, CFT e CFTA
                 e credenciados pelo INCRA.
@@ -80,7 +80,7 @@ const About = () => {
             >
               <img
                 src={officeImage}
-                alt="Escritório da TopoAgro em Frutal - MG"
+                alt="Escritório da Topoagro em Frutal - MG"
                 className="w-full h-auto object-cover"
               />
             </motion.div>

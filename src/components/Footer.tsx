@@ -24,18 +24,18 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <img
               src="/logo.png"
-              alt="TopoAgro"
+              alt="Topoagro"
               className="h-12 sm:h-14 md:h-16 mb-3 sm:mb-4"
             />
             <p className="text-white/70 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
-              Serviço top é TopoAgro, sempre ao lado do homem do campo.
+              Serviço top é Topoagro, sempre ao lado do homem do campo.
             </p>
             <div className="flex gap-2 sm:gap-3">
               <a
                 href="https://www.instagram.com/topoagrofrutal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da TopoAgro"
+                aria-label="Instagram da Topoagro"
                 className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://www.facebook.com/topoagrofrutal"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook da TopoAgro"
+                aria-label="Facebook da Topoagro"
                 className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -83,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-1.5 sm:space-y-2 text-white/70 text-sm sm:text-base">
               <li>Georreferenciamento</li>
               <li>CAR - Reserva legal</li>
-              <li>Levantamentos</li>
+              <li>Consultoria ambiental</li>
               <li>Mapeamento com drones</li>
               <li>Topografia geral</li>
             </ul>
@@ -131,7 +131,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-white/10 pt-6 sm:pt-8 text-center">
           <p className="text-white/60 text-xs sm:text-sm">
-            © {currentYear} TopoAgro. Todos os direitos reservados.
+            © {currentYear} Topoagro. Todos os direitos reservados.
           </p>
           <p className="text-white/40 text-xs mt-1.5 sm:mt-2">
             CNPJ: 21.673.953/0001-90
