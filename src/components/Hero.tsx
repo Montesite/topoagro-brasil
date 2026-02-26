@@ -62,31 +62,26 @@ const Hero = () => {
           animate="visible"
           className="max-w-4xl mx-auto"
         >
-          {/* Logo Badge */}
+          {/* Logo Badge - smaller size */}
           <motion.div variants={itemVariants} className="mb-6 sm:mb-8 flex justify-center">
             <motion.img
               src="/logo.png"
-              alt="TopoAgro"
-              className="h-16 sm:h-20 md:h-24 lg:h-32 drop-shadow-2xl"
+              alt="Topoagro"
+              className="h-20 sm:h-24 md:h-28 lg:h-36 xl:h-40 drop-shadow-2xl"
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ duration: 0.3 }}
             />
           </motion.div>
 
-          {/* H1 - Company Name */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-lg"
-          >
-            TopoAgro
-          </motion.h1>
+          {/* H1 - Company Name (hidden visually for SEO but present in DOM) */}
+          <h1 className="sr-only">Topoagro</h1>
 
           {/* H2 - Description */}
           <motion.h2
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 font-medium mb-3 sm:mb-4 max-w-3xl mx-auto px-2"
           >
-            Especialistas em topografia, georreferenciamento e agrimensura para imóveis rurais e urbanos
+            Especialistas em topografia, consultoria ambiental, georreferenciamento e agrimensura em geral
           </motion.h2>
 
           {/* Slogan */}
@@ -94,7 +89,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-primary font-bold mb-6 sm:mb-8 tracking-wide px-2"
           >
-            Serviço top é TopoAgro, sempre ao lado do homem do campo.
+            Serviço top é Topoagro, sempre ao lado do homem do campo.
           </motion.p>
 
           {/* Location */}

@@ -36,7 +36,7 @@ const SocialMedia = () => {
             >
               <img
                 src={teamImage}
-                alt="Equipe TopoAgro trabalhando em campo"
+                alt="Equipe Topoagro trabalhando em campo"
                 className="w-full h-auto object-cover"
               />
             </motion.div>
@@ -50,7 +50,7 @@ const SocialMedia = () => {
                 Redes sociais
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-3 sm:mb-4">
-                Siga a TopoAgro
+                Siga a Topoagro
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
                 Acompanhe nosso trabalho e fique por dentro das novidades do mundo da topografia e agrimensura.
@@ -116,7 +116,7 @@ const SocialMedia = () => {
             >
               <p className="text-muted-foreground text-sm sm:text-base">
                 Compartilhe usando{" "}
-                <span className="text-primary font-bold text-base sm:text-lg">#TopoAgro</span>
+                <span className="text-primary font-bold text-base sm:text-lg">#Topoagro</span>
               </p>
             </motion.div>
           </AnimatedSection>

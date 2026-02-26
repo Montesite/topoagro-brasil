@@ -4,17 +4,16 @@ import {
   Compass,
   Mountain,
   Layers,
-  Building,
   Plane,
   BarChart3,
   TreePine,
   Repeat,
   Phone,
+  Leaf,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import serviceGeoRural from "@/assets/service-georeferencing-rural.jpg";
+import serviceGeoRuralUrban from "@/assets/service-geo-rural-urban.jpg";
 import serviceCarReserve from "@/assets/service-car-reserve.jpg";
-import serviceUrbanGeo from "@/assets/service-urban-geo.jpg";
 import serviceConsulting from "@/assets/service-consulting.jpg";
 import serviceCadastral from "@/assets/service-cadastral.jpg";
 import servicePlanaltimetric from "@/assets/service-planaltimetric.jpg";
@@ -22,16 +21,17 @@ import serviceContourLines from "@/assets/service-contour-lines.jpg";
 import serviceSubdivision from "@/assets/service-subdivision.jpg";
 import serviceInventory from "@/assets/service-inventory.jpg";
 import serviceDroneMapping from "@/assets/service-drone-mapping.jpg";
+import serviceEnvironmental from "@/assets/service-environmental-consulting.jpg";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/animations";
 
 const Services = () => {
   const services = [
     {
       icon: MapPin,
-      title: "Georreferenciamento de imóveis rurais",
+      title: "Georreferenciamento de imóveis rurais e urbanos",
       description:
-        "Certificação de imóveis rurais junto ao INCRA com precisão e agilidade.",
-      image: serviceGeoRural,
+        "Certificação e levantamentos precisos de imóveis rurais junto ao INCRA e regularização de imóveis urbanos.",
+      image: serviceGeoRuralUrban,
     },
     {
       icon: TreePine,
@@ -41,15 +41,15 @@ const Services = () => {
       image: serviceCarReserve,
     },
     {
-      icon: Building,
-      title: "Georreferenciamento urbano",
+      icon: Leaf,
+      title: "Consultoria ambiental",
       description:
-        "Levantamentos precisos para regularização de imóveis urbanos.",
-      image: serviceUrbanGeo,
+        "Assessoria completa em licenciamento ambiental, estudos de impacto e regularização ambiental.",
+      image: serviceEnvironmental,
     },
     {
       icon: FileText,
-      title: "Consultoria de compra e venda",
+      title: "Consultoria de compra e venda de imóveis rurais",
       description:
         "Assessoria completa para transações de imóveis rurais com segurança.",
       image: serviceConsulting,

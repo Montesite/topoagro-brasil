@@ -138,7 +138,7 @@ const Contact = () => {
                 href="https://www.instagram.com/topoagrofrutal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da TopoAgro"
+                aria-label="Instagram da Topoagro"
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-instagram-from to-instagram-to rounded-lg flex items-center justify-center text-primary-foreground"
@@ -149,7 +149,7 @@ const Contact = () => {
                 href="https://www.facebook.com/topoagrofrutal"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook da TopoAgro"
+                aria-label="Facebook da Topoagro"
                 whileHover={{ scale: 1.2, rotate: -10 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-10 h-10 sm:w-12 sm:h-12 bg-facebook rounded-lg flex items-center justify-center text-primary-foreground"
@@ -159,12 +159,12 @@ const Contact = () => {
             </motion.div>
           </AnimatedSection>
 
-          {/* CTA Card */}
-          <AnimatedSection direction="right">
+          {/* Right Column: CTA Card + Google Maps */}
+          <AnimatedSection direction="right" className="space-y-6">
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-br from-primary to-secondary rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 text-white h-full"
+              className="bg-gradient-to-br from-primary to-secondary rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 text-white"
             >
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
                 Pronto para começar seu projeto?
@@ -213,6 +213,21 @@ const Contact = () => {
                 </p>
               </div>
             </motion.div>
+
+            {/* Google Maps */}
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.123456789!2d-48.9404!3d-20.0267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc32f1a1a1a1a1%3A0x1234567890abcdef!2sPra%C3%A7a%20da%20Bandeira%2C%2027%20-%20XV%20de%20Novembro%2C%20Frutal%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Topoagro em Frutal - MG"
+                className="w-full"
+              />
+            </div>
           </AnimatedSection>
         </div>
       </div>

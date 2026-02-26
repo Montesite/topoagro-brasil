@@ -52,7 +52,7 @@ const Header = () => {
         >
           <img
             src="/logo.png"
-            alt="TopoAgro - Topografia e Georreferenciamento"
+            alt="Topoagro - Topografia e Georreferenciamento"
             className={`transition-all duration-300 ${
               isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
             }`}
