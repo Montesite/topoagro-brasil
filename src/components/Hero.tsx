@@ -67,7 +67,7 @@ const Hero = () => {
             <motion.img
               src="/logo.png"
               alt="Topoagro"
-              className="h-20 sm:h-24 md:h-28 lg:h-36 xl:h-40 drop-shadow-2xl"
+              className="h-28 sm:h-36 md:h-44 lg:h-52 xl:h-60 drop-shadow-2xl"
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ duration: 0.3 }}
             />
